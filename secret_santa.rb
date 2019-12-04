@@ -71,7 +71,7 @@ people.each do |person|
   target_name    = person.name
   message        = ERB.new(template).result(binding)
   email = Email.new(
-    person.santa.email, "SANTABOT 5000: #{Time.now.year} TARGETS", message
+    person.santa.email, "VT Secret Santa #{Time.now.year}", message
   )
   emailer.send(email)
 end
